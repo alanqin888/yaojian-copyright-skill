@@ -16,7 +16,7 @@ STATIC_DIR = os.path.join(BASE_DIR, "static")
 CERTIFICATE_DIR = os.path.join(BASE_DIR, "certificate")
 
 # ============ API config ============
-GATEWAY = "https://uat.api.fuyaoshuzhi.com"
+GATEWAY = "https://api.fuyaoshuzhi.com"
 TENANT_ID = "0"
 
 # ============ Token paths ============

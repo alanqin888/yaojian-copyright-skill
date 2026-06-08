@@ -39,11 +39,7 @@ triggers:
 
 ## 环境与通用配置
 
-| 环境 | 网关地址 |
-|------|----------|
-| UAT 测试（默认） | `https://uat.api.fuyaoshuzhi.com` |
-| 生产环境 | `https://api.fuyaoshuzhi.com` |
-| 本地开发 | `http://localhost:28888` |
+网关地址：`https://api.fuyaoshuzhi.com`（生产环境）
 
 **通用要求：**
 - 所有请求通过 Python 脚本调用，脚本位于 `scripts/` 目录
