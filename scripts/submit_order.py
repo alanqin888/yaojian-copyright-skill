@@ -35,7 +35,7 @@ def submit_order(order_data_path):
         "source": "AI_MINI",
         "remark": "",
         "credentialId": order_data["credentialId"],
-        "storage": True,
+        "storage": order_data.get("storage", True),
         "batchData": order_data["batchData"]
     }
 

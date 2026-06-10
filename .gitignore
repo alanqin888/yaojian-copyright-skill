@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS
+.DS_Store
+.trae
+
+# Project Specific
+temp/
+static/
+certificate/
+
+# Test and Mock files
+test_*.py
+*_mock.py
+tests/
+
