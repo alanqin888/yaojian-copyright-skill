@@ -1,0 +1,44 @@
+{
+  "name": "yaojian-copyright",
+  "owner": {
+    "name": "Shenzhen Xinronghe Technology Co., Ltd. (xrh)"
+  },
+  "plugins": [
+    {
+      "name": "yaojian-skill",
+      "source": "./",
+      "description": "爻鉴版权保护与数据存证专家：DCI 确权、区块链微链存证、版权证书申领与侵权维权指引。一句「帮我存证」自动完成全流程。",
+      "version": "1.0.0",
+      "author": {
+        "name": "xrh"
+      },
+      "homepage": "https://www.yaojianpro.com",
+      "repository": "https://github.com/alanqin888/yaojian-copyright-skill",
+      "license": "MIT",
+      "keywords": [
+        "copyright",
+        "DCI",
+        "evidence",
+        "blockchain",
+        "copyright-registration",
+        "版权登记",
+        "区块链存证"
+      ],
+      "category": "productivity",
+      "tags": [
+        {
+          "en": "Copyright Registration",
+          "zh": "版权登记"
+        },
+        {
+          "en": "Blockchain Evidence",
+          "zh": "区块链存证"
+        },
+        {
+          "en": "Rights Protection",
+          "zh": "侵权维权"
+        }
+      ]
+    }
+  ]
+}
