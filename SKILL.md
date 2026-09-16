@@ -1,6 +1,10 @@
 ---
-name: 爻鉴版权登记与存证
-identifier: yaojian-copyright-evidence
+name: yaojian-copyright-evidence
+version: 1.0.0
+display_name: 爻鉴版权登记与存证
+display_name_en: Yaojian Copyright Registration & Evidence
+description_zh: 爻鉴版权保护与数据存证工具，支持DCI确权、微链存证、版权证书申领与侵权维权指引。当用户提到版权、确权、存证、侵权取证等关键词时触发本技能。
+description_en: Yaojian copyright protection and data evidence tool for DCI confirmation, blockchain micro-chain evidence, copyright certificate application, and rights protection guidance. Triggered by keywords such as copyright, DCI, evidence, and infringement.
 description: 爻鉴版权保护与数据存证工具。当用户提到版权、确权、DCI、版权申请、版权登记、版权保护、数字版权、著作权、存证、微链存证、区块链存证、数据存证、哈希上链、防篡改、证据固化、证据保全、电子存证、侵权取证、版权证书、帮我存证、存证证书等关键词时触发本技能。
 triggers:
   - 确权
@@ -13,6 +17,8 @@ triggers:
   - 存证一下
   - 存个证
 ---
+
+
 # 微存证技能
 
 ## 重要规则
@@ -68,7 +74,7 @@ triggers:
 **1.1 获取验证码图片**
 
 ```
-python scripts/send_sms.py 13372650197
+python scripts/send_sms.py {手机号}
 ```
 
 脚本自动完成：调用验证码接口 → 提取 Base64 图片保存到 `temp/captcha_temp.png` → 保存 identity 到 `temp/captcha_identity.txt` → 输出 `CAPTCHA_SAVED|identity=xxx|png=xxx`
@@ -82,19 +88,19 @@ python scripts/send_sms.py 13372650197
 将识别出的字符作为第二个参数传入脚本：
 
 ```
-python scripts/send_sms.py 13372650197 {识别结果}
+python scripts/send_sms.py {手机号} {识别结果}
 ```
 
 脚本自动完成：手机号 Base64 编码 → 调用短信接口 → 输出 `SMS_SENT|mobile=xxx` 或 `SMS_FAILED|message=xxx`
 
-> **一步完成**：如果 AI 已提前识别出验证码，可直接 `python scripts/send_sms.py 13372650197 验证码` 跳过等待。
+> **一步完成**：如果 AI 已提前识别出验证码，可直接 `python scripts/send_sms.py {手机号} 验证码` 跳过等待。
 
 ### 步骤2：调用登录接口
 
 使用 `scripts/login.py` 完成登录并保存 Token：
 
 ```
-python scripts/login.py 13372650197 {短信验证码}
+python scripts/login.py {手机号} {短信验证码}
 ```
 
 脚本自动完成：调用登录接口 → 保存 Token 到 `static/.auth_token.json` → 输出 `LOGIN_SUCCESS|mobile=xxx` 或 `LOGIN_FAILED|message=xxx`
@@ -143,7 +149,7 @@ python scripts/init_credential.py
   "refresh_token": "xxx...",
   "token_type": "Bearer",
   "expires_in": 3599,
-  "mobile": "13372650197",
+  "mobile": "{用户手机号}",
   "login_time": "2026-06-01T13:02:31",
   "expire_time": "2026-06-01T14:02:31"
 }
@@ -358,7 +364,6 @@ Remove-Item -Path "$PWD\temp" -Recurse -Force
 优先从远程 URL 实时抓取，抓取失败时回退到本地文件：
 
 **优先**：远程 URL
-
 ```
 https://oss.fuyaoshuzhi.com/assets/yaojian/%E7%88%BB%E9%89%B4%E9%97%AE%E9%A2%98%E5%BA%93.md
 ```

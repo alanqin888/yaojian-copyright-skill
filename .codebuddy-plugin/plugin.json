@@ -1,0 +1,68 @@
+{
+  "name": "yaojian-skill",
+  "version": "1.0.0",
+  "description": "Yaojian copyright protection and data evidence expert: DCI confirmation, micro-chain evidence notarization, copyright certificate application, and rights protection guidance.",
+  "author": {
+    "name": "子不语安安"
+  },
+  "license": "MIT",
+  "keywords": [
+    "copyright",
+    "DCI",
+    "evidence",
+    "blockchain",
+    "copyright-registration"
+  ],
+  "agents": [
+    "./agents/yaojian-expert.md"
+  ],
+  "expertType": "agent",
+  "agentName": "yaojian-expert",
+  "displayName": {
+    "en": "Yaojian Copyright Assistant",
+    "zh": "爻鉴版权助手"
+  },
+  "profession": {
+    "en": "Copyright Registration & Evidence Expert",
+    "zh": "版权登记与存证专家"
+  },
+  "displayDescription": {
+    "en": "Dedicated to digital copyright protection: DCI confirmation, blockchain evidence notarization and copyright certificate application; provides evidence fixation and rights protection guidance when infringement occurs.",
+    "zh": "专注数字版权保护，支持DCI确权、区块链存证与版权证书申领；被侵权时提供证据固化与维权指引，助创作者快速确权。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "11-SecurityCompliance",
+  "defaultInitPrompt": {
+    "zh": "帮我给作品做一个区块链存证",
+    "en": "Help me create blockchain evidence for my work"
+  },
+  "plugin": "yaojian-skill",
+  "tags": [
+    {
+      "en": "Copyright Registration",
+      "zh": "版权登记"
+    },
+    {
+      "en": "Blockchain Evidence",
+      "zh": "区块链存证"
+    },
+    {
+      "en": "Rights Protection",
+      "zh": "侵权维权"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "zh": "帮我给作品做一个区块链存证",
+      "en": "Help me create blockchain evidence for my work"
+    },
+    {
+      "zh": "DCI和版权证书有什么区别？",
+      "en": "What is the difference between DCI and a copyright certificate?"
+    },
+    {
+      "zh": "我的作品被抄袭了怎么办？",
+      "en": "My work was plagiarized, what should I do?"
+    }
+  ]
+}
